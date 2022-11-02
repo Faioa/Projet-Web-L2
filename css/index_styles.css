@@ -1,0 +1,95 @@
+.dpres {
+    margin-top: 2.5em;
+}
+
+.titre1 {
+    display: flex;
+    justify-content: center;
+}
+
+.pres {
+    font-size: 5em;
+    display: flex;
+    justify-content: center;
+}
+
+.highlight {
+    color: rgb(0, 117, 153);
+    font-weight: bolder;
+}
+
+.material-symbols-outlined {
+    color:rgb(255, 165, 252);
+}
+
+.dpres ul {
+    align-items: baseline;
+}
+
+.dpres ul li {
+    margin-left: 0.8em;
+    text-align:left;
+    font-size: 1em ;
+    list-style: none;
+}
+
+#myCarousel {
+    background: rgb(32,32,32);
+    width: 70em;
+    height: 40em;
+}
+
+.carrousel {
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+}
+
+.populaires {
+    background-color: linear-gradient(to bottom,rgb(0, 0, 0),rgb(22, 0, 0)) ;
+    flex-direction: row;
+    display: flex;
+    margin-right: 2em;
+    margin-left: 2em;
+}
+
+main img {
+    width: 15em;
+}
+
+main .pres {
+    display: flex;
+    justify-content: center;
+}
+
+main .dpres img {
+    margin-left: 1em;
+    height: 25em;
+    width: 9em;
+    position: relative;
+}
+
+.gooddeals {
+    width: 15em;
+    background-color: linear-gradient(to bottom,rgb(0, 0, 0),rgb(22, 0, 0)) ;
+    flex-direction: row;
+    display: flex;
+    border: 1px solid white;
+}
+
+.inline {
+    display: inline;
+}
+
+.row .row img{
+    width: 15em;
+    transition: transform .1s;
+}
+
+img:hover:not(#myCarousel) {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.1);
+    transition: 0.2s;
+}
