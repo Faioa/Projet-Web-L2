@@ -1,6 +1,30 @@
 <?php
     session_start();
     require_once 'scripts/config.php';
+
+    if(isset($_GET['product']))
+    {
+        $product = $_GET['product'];
+        if($check = $DB -> query("SELECT Name from product WHERE Name = '$product'"))
+        {
+            if($DB -> affected_rows == 1)
+            {
+                $images = array("images/".$product."/".$product."1.jpg", "images/".$product."/".$product."2.jpg", "images/".$product."/".$product."3.jpg", "images/".$product."/".$product."4.jpg", "images/".$product."/".$product."5.jpg");
+
+                if($query = $DB -> query("SELECT Price, Producer, Description, Caracteristics FROM product WHERE Name = '$product'"))
+                {
+                    if($DB -> affected_rows == 1)
+                    {
+                        $array = $query -> fetch_assoc();
+                        $price = $array['Price'];
+                        $producer = $array['Producer'];
+                        $description = $array['Description'];
+                        $caracteristics = $array['Caracteristics'];
+                    }else header('Location:landing.php?method=error');
+                }else header('Location:landing.php?method=error');
+            }else header('Location:landing.php?method=error');
+        }else header('Location:landing.php?method=error');
+    }else header('Location:landing.php?method=error');
 ?>
 
 <html lang="en" id="head">
@@ -12,92 +36,83 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
         <link rel="stylesheet" href="css/common_styles.css">
-        <link rel="stylesheet" href="css/index_styles.css">
+        <link rel="stylesheet" href="css/article_styles.css">
         <title>Welcome to PickaGuitar</title>
     </head>
     <body>
-<!--Barre de navigation dans le header-->
-        <header>
-            <nav>
-                <div id="firstheader">
-                    <li><a href="index.php" title="home">HOME</a></li>
-                    <li><a href="store.php" title='store'>STORE</a></li>
-                    <li>
-                        <form method="post">
-                            <input type="search" placeholder="Search"></input>
-                            <button>
-                                <span class="material-symbols-outlined">search</span>
-                            </button>
-                        </form>
-                    </li>
-                </div>
-  
-                <div id="logoheaderdiv">
-                    <a href="#head" title="head"><img id="logoheader" src="images/logo.png" alt=""></a>
-                </div>
+        <?php
+            require_once('scripts/header.php');
+        ?>
 
-                <div id="secondheader">
-                    <li>
-                        <a href="#contact" title="contact">CONTACT</a>
-                    </li>
-                    <li>ACCOUNT
-                        <ul id="sub-menu">
-                            <?php
-                                if(isset($_SESSION['user']))
-                                {
-                                    echo "
-                                        <li>
-                                            <a href=\"profile.php\" title=\"profile\">PROFILE</a>
-                                        </li>
-                                        <li>
-                                            <a href=\"scripts/signout.php\" title=\"signout\">SIGN OUT</a>
-                                        </li>";
-                                }
-                                else
-                                {
-                                    echo "
-                                        <li>
-                                            <a href=\"signup.php\" title=\"signup\">SIGN UP</a>
-                                        </li>
-                                        <li>
-                                            <a href=\"signin.php\" title=\"signin\">SIGN IN</a>
-                                        </li>";
-                                }
-                            ?>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="cart.php" title="cart">
-                            <span class="material-symbols-outlined">shopping_cart</span>
-                        </a>
-                    </li>
-                </div>
-            </nav>
-        </header>
-
-        <main>
-        </main>
-
-<!--Footer avec les contacts-->
-        <footer id="contact">
-            <hr/>
-            <h1><span>Contact us</span></h1>
-            <div>
-                <div>
-                    <p>
-                        You can contact our <span>Customer Service</span>Available<span>24/7</span> for any Questions or Demands.
-                    </p>
-                    <div id="footercontact1">
-                        <li>
-                            <a href="tel:+33641567139" title="tel"><span class="material-symbols-outlined">call</span><span>+33641567139</span></a>
-                        </li>
-                        <li>
-                            <a href="mailto:pickaguitar@gmail.com" title="email"><span class="material-symbols-outlined">mail</span><span>pickaguitar@gmail.com</span></a>
-                        </li>
+    <main>
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-md-8" id="guitar-images">
+                    <div class="row">
+                        <?php
+                            echo "
+                                <img class=\"img-fluid\" src=\"$images[0]\" alt=\"$images[0]\" />
+                            ";
+                        ?>
+                    </div>
+                    <div class="row">
+                        <?php
+                            echo "
+                                <div id=\"miniatures\">
+                                    <img class=\"img-fluid col-md-2 miniature\" src=\"$images[1]\" alt=\"$images[1]\" />
+                                    <img class=\"img-fluid col-md-2 miniature\" src=\"$images[2]\" alt=\"$images[2]\" />
+                                    <img class=\"img-fluid col-md-2 miniature\" src=\"$images[3]\" alt=\"$images[3]\" />
+                                    <img class=\"img-fluid col-md-2 miniature\" src=\"$images[4]\" alt=\"$images[4]\" />
+                                </div>
+                            ";
+                        ?>
                     </div>
                 </div>
-            </div>
-        </footer>
 
+                <div class="col-md-4 ">
+                    <p>
+                        <?php
+                            echo "
+                                <h2>$product</h2>
+                                <h3>Producer : $producer</h3>
+                                <h4 id=\"prix\">$price$</h4>
+                            ";
+                        ?>
+                        <hr>
+                        <div class="text-right">Available</div>
+                        <hr>
+                        <div class="float-right">
+<!--essayer de faire un bouton qui gère aussi la quantité-->
+                            <a href="" class="btn btn-primary">
+                                Add To Cart<i class="fas fa-shopping-cart"></i>
+                            </a>
+                        </div>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+              <div class="row">
+                <div class="col-8">
+                    <h3>Description</h3>
+                    <div id="description">
+                        <?php
+                            echo "$description";
+                        ?>
+                    </div>
+                    <h3>Caracteristics</h3>
+                    <div id="caracteristics">
+                        <?php
+                            echo "$caracteristics";
+                        ?>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </main>
+
+        <?php
+            require_once('scripts/footer.php');
+        ?>
     </body>
 </html>

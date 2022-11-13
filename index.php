@@ -17,88 +17,16 @@
         <title>Welcome to PickaGuitar</title>
     </head>
     <body>
-<!--Barre de navigation dans le header-->
-        <header>
-            <nav>
-                <div id="firstheader">
-                    <li><a href="index.php" title="home">HOME</a></li>
-                    <li><a href="store.php" title='store'>STORE</a></li>
-                    <li>
-                        <form method="post">
-                            <input type="search" placeholder="Search"></input>
-                            <button>
-                                <span class="material-symbols-outlined">search</span>
-                            </button>
-                        </form>
-                    </li>
-                </div>
-  
-                <div id="logoheaderdiv">
-                    <a href="#head" title="head"><img id="logoheader" src="images/logo.png" alt=""></a>
-                </div>
+        <?php
+            require_once('scripts/header.php');
+        ?>
 
-                <div id="secondheader">
-                    <li>
-                        <a href="#contact" title="contact">CONTACT</a>
-                    </li>
-                    <li>ACCOUNT
-                        <ul id="sub-menu">
-                            <?php
-                                if(isset($_SESSION['user']))
-                                {
-                                    echo "
-                                        <li>
-                                            <a href=\"profile.php\" title=\"profile\">PROFILE</a>
-                                        </li>
-                                        <li>
-                                            <a href=\"scripts/signout.php\" title=\"signout\">SIGN OUT</a>
-                                        </li>";
-                                }
-                                else
-                                {
-                                    echo "
-                                        <li>
-                                            <a href=\"signup.php\" title=\"signup\">SIGN UP</a>
-                                        </li>
-                                        <li>
-                                            <a href=\"signin.php\" title=\"signin\">SIGN IN</a>
-                                        </li>";
-                                }
-                            ?>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="cart.php" title="cart">
-                            <span class="material-symbols-outlined">shopping_cart</span>
-                        </a>
-                    </li>
-                </div>
-            </nav>
-        </header>
-
-        <main> <!--pavé avec la présentation du site-->
-            
+        <main>
+            <a href="article.php?product=Takamine-GD93CE">Test article.php</a>
         </main>
-
-<!--Footer avec les contacts-->
-        <footer id="contact">
-            <hr/>
-            <h1><span>Contact us</span></h1>
-            <div>
-                <div>
-                    <p>
-                        You can contact our <span>Customer Service</span>Available<span>24/7</span> for any Questions or Demands.
-                    </p>
-                    <div id="footercontact1">
-                        <li>
-                            <a href="tel:+33641567139" title="tel"><span class="material-symbols-outlined">call</span><span>+33641567139</span></a>
-                        </li>
-                        <li>
-                            <a href="mailto:pickaguitar@gmail.com" title="email"><span class="material-symbols-outlined">mail</span><span>pickaguitar@gmail.com</span></a>
-                        </li>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        
+        <?php
+            require_once('scripts/footer.php');
+        ?>
     </body>
 </html>
