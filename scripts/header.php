@@ -4,8 +4,8 @@
             <li><a href="index.php" title="home">HOME</a></li>
             <li><a href="store.php" title='store'>STORE</a></li>
             <li>
-                <form method="post">
-                    <input type="search" placeholder="Search"></input>
+                <form method="get" action="store.php">
+                    <input type="search" placeholder="Search" name="search"></input>
                     <button>
                         <span class="material-symbols-outlined">search</span>
                     </button>
@@ -24,7 +24,7 @@
             <li>ACCOUNT
                 <ul id="sub-menu">
                     <?php
-                        if(isset($_SESSION['user']))
+                        if($_SESSION['user'] != "localhost")
                         {
                             echo "
                                 <li>

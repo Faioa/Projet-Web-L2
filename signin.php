@@ -11,11 +11,11 @@
         if(!filter_var($email, FILTER_VALIDATE_EMAIL))
             header('Location:signin.php?login_err=true');
         
-        if ($check = $DB -> query("SELECT Email FROM user WHERE Email = '$email' AND Password = '$password'")) {
+        if ($check = $DB -> query("SELECT ID FROM user WHERE Email = '$email' AND Password = '$password'")) {
             if($DB -> affected_rows == 1)
             {
                 $data = $check -> fetch_assoc();
-                $_SESSION['user'] = $data['Email'];
+                $_SESSION['user'] = $data['ID'];
                 header('Location:landing.php?method=signin');
             }else header('Location:signin.php?login_err=true');
         }
@@ -32,7 +32,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
         <link rel="stylesheet" href="css/common_styles.css">
         <link rel="stylesheet" href="css/signin_styles.css">
-        <title>Sign In - PickaGuitar</title>
+        <title>Welcome to PickaGuitar</title>
     </head>
     <body>
         <?php

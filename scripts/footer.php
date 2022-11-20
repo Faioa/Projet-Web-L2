@@ -1,5 +1,6 @@
-<footer class="contact">
-    <h1 class="titre1">Contact us</h1>
+<footer id="contact">
+    <h1>Contact us</h1>
+    <hr />
     <div>
         <div>
             <p>
@@ -13,6 +14,7 @@
                     <a href="mailto:pickaguitar@gmail.com" title="email"><span class="material-symbols-outlined">mail</span>&nbsp;&nbsp;<span>pickaguitar@gmail.com</span></a>
                 </li>
             </div>
+            <p>©PickaGuitar - All rights reserved</p>
         </div>
     </div>
 </footer>

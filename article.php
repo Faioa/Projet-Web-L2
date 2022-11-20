@@ -11,7 +11,7 @@
             {
                 $images = array("images/".$product."/".$product."1.jpg", "images/".$product."/".$product."2.jpg", "images/".$product."/".$product."3.jpg", "images/".$product."/".$product."4.jpg", "images/".$product."/".$product."5.jpg");
 
-                if($query = $DB -> query("SELECT Price, Producer, Description, Caracteristics, Stock FROM product WHERE Name = '$product'"))
+                if($query = $DB -> query("SELECT ID, Price, Producer, Description, Caracteristics, Stock FROM product WHERE Name = '$product'"))
                 {
                     if($DB -> affected_rows == 1)
                     {
@@ -21,6 +21,19 @@
                         $description = $array['Description'];
                         $caracteristics = $array['Caracteristics'];
                         $stock = $array['Stock'];
+                        $id = intval($array['ID']);
+                        if(isset($_GET['add']))
+                        {
+                            if(!isset($_SESSION['cart']))
+                                $_SESSION['cart'] = array($id => 1);
+                            else
+                            {
+                                if(isset($_SESSION['cart'][$id]))
+                                    $_SESSION['cart'][$id]++;
+                                else
+                                    $_SESSION['cart'][$id] = 1;
+                            }
+                        }
                     }else header('Location:landing.php?method=error');
                 }else header('Location:landing.php?method=error');
             }else header('Location:landing.php?method=error');
@@ -38,7 +51,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
         <link rel="stylesheet" href="css/common_styles.css">
         <link rel="stylesheet" href="css/article_styles.css">
-        <title>Article - PickaGuitar</title>
+        <title>Welcome to PickaGuitar</title>
     </head>
 
     <body>
@@ -70,6 +83,7 @@
                         ?>
                     </div>
                 </div>
+
                 <div class="col-md-4" id="infos-product">
                     <span>
                         <?php
@@ -83,12 +97,21 @@
                             {
                                 echo "
                                     <div class=\"alert-success alert\" id=\"disponibility\">Available</div>
-                                    <div class=\"float-right\">
-                                        <a href=\"\" class=\"btn btn-primary\">
-                                            Add To Cart<i class=\"fas fa-shopping-cart\"></i>
-                                        </a>
-                                    </div>
-                                ";
+                                    <div class=\"float-right\" id=\"add-button\">
+                                        <form method=\"get\" action=\"article.php\">
+                                            <input type=\"hidden\" value=\"$product\" name=\"product\" />
+                                            <button type=\"submit\" value=\"$product\" name=\"add\" class=\"btn btn-primary\">
+                                                Add To Cart<i class=\"fas fa-shopping-cart\"></i>
+                                            </button>
+                                        </form>
+                                      ";
+                                if(isset($_GET['add']) && isset($_SESSION['cart'][$id]))
+                                {
+                                    echo "
+                                        <p id=\"success\">Success, this item was added to your cart !</p>
+                                    ";
+                                }
+                                echo "</div>";
                             }else if($stock == 0)
                             {
                                 echo "
@@ -99,11 +122,20 @@
                                 echo "
                                     <div class=\"alert-warning alert\" id=\"disponibility\">Only $stock available</div>
                                     <div id=\"add-cart\">
-                                        <a href=\"\" class=\"btn btn-primary\">
-                                            Add To Cart<i class=\"fas fa-shopping-cart\"></i>
-                                        </a>
-                                    </div>
+                                        <form method=\"get\" action=\"article.php\">
+                                            <input type=\"hidden\" value=\"$product\" name=\"product\" />
+                                            <button type=\"submit\" value=\"$product\" name=\"add\" class=\"btn btn-primary\">
+                                                Add To Cart<i class=\"fas fa-shopping-cart\"></i>
+                                            </button>
+                                        </form>
                                 ";
+                                if(isset($_GET['add']) && isset($_SESSION['cart'][$id]))
+                                {
+                                    echo "
+                                        <p id=\"success\">Success, this item was added to your cart !</p>
+                                    ";
+                                }
+                                echo "</div>";
                             }
                         ?>
                     </span>
@@ -126,6 +158,7 @@
             </div>
         </div>
     </main>
+
         <?php
             require_once('scripts/footer.php');
         ?>

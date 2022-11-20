@@ -3,7 +3,9 @@
 
 	if(!isset($_GET[ 'method' ]))
 		header('Location:index.php');
-	header( "refresh:5;url=index.php" );
+    if($_GET['method'] == 'delete')
+        session_destroy();
+    header( "refresh:5;url=index.php" );
 ?>
 
 <html lang="en" id="head">
@@ -16,7 +18,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
         <link rel="stylesheet" href="css/common_styles.css">
         <link rel="stylesheet" href="css/landing_styles.css">
-        <title>PickaGuitar</title>
+        <title>Welcome to PickaGuitar</title>
     </head>
     <body>
         <?php
@@ -38,6 +40,10 @@
     	        	{
     	        		echo "<p>Something went wrong... Try again later.<br /> Please wait a few seconds, you'll be redirected onto the main page.</p>";
     	        	}
+                    elseif($_GET['method'] == 'delete')
+                    {
+                        echo "<p>Your account was successfully deleted !<br />We'll miss you fellow guitar lover... :(<br /> Please wait a few seconds, you'll be redirected onto the main page.</p>";
+                    }
     	        ?>
                 <div class="loader">
                     <span></span>

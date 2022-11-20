@@ -1,5 +1,5 @@
 .container {
-	background: rgba(51, 17, 2, 0.85);
+  	background: rgba(29, 10, 0, 0.85);
   	box-sizing: border-box;
 	box-shadow: 0 15px 25px rgba(0,0,0,.6);
 	border-radius: 10px;
@@ -86,6 +86,12 @@
 }
 
 #add-cart {
+	color: red;
 	float: right;
+	text-align: right;
+}
+
+#add-button {
+	color: red;
 	text-align: right;
 }

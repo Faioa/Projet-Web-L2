@@ -13,7 +13,7 @@ main div {
   left: 50%;
   width: 500px;
   transform: translate(-50%, -50%);
-  background: rgba(51, 17, 2, 0.85);
+  background: rgba(29, 10, 0, 0.85);
   box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(0,0,0,.6);
   border-radius: 10px;
@@ -22,7 +22,7 @@ main div {
 .loader {
   box-shadow: none;
   position: absolute;
-  top: 55%;
+  top: 50%;
   bottom: 0px;
   left: 30%;
   right: 0px;

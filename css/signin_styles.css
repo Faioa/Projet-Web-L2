@@ -1,5 +1,5 @@
 footer {
-  margin-top: 700px;
+  margin-top: 740px;
 }
 
 .error {
@@ -24,12 +24,12 @@ footer {
 
 .login-box {
   position: absolute;
-  top: 43%;
+  top: 40%;
   left: 50%;
   width: 400px;
   padding: 40px;
   transform: translate(-50%, -50%);
-  background: rgba(51, 17, 2, 0.85);
+  background: rgba(29, 10, 0, 0.85);
   box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(0,0,0,.6);
   border-radius: 10px;

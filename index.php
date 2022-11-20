@@ -17,14 +17,15 @@
         <title>Welcome to PickaGuitar</title>
     </head>
     <body>
-        <!-- <?php
+        <?php
             require_once('scripts/header.php');
-        ?> -->
+        ?>
+
         <main>
             <div class="container p-4">
                 <div class="row">
                     <div class="pic-ctn col-12">
-                        #Premier carroussel (presentation)
+                        <!--Premier carroussel (presentation)-->
                         <img src="images/pres/pres-pic1.jpg" alt="" class="pic">
                         <img src="images/pres/pres-pic2.jpg" alt="" class="pic">
                         <img src="images/pres/pres-pic3.jpg" alt="" class="pic">
@@ -44,33 +45,33 @@
                                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                             </ol>
                             <div class="carousel-inner">
-                            <div class="carousel-item active" style="text-align: center !important;">
-                                <a href="article.php?produit=Gibson-SG"><img src="images/Gibson-SG/Gibson-SG1.jpg" alt=""></a>
-                                <div class="carousel-caption d-none d-md-block">
-                                    <p>Gibson SG</p>
+                                <div class="carousel-item active" style="text-align: center !important;">
+                                    <a href="article.php?produit=Gibson-SG"><img src="images/Gibson-SG/Gibson-SG1.jpg" alt=""></a>
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <p>Gibson SG</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="carousel-item" style="text-align: center !important;">
-                                <a href="article.php?produit=LTD-EII-Eclipse"><img src="images/LTD-EII-Eclipse/LTD-EII-Eclipse1.jpg" alt=""></a>
-                                <div class="carousel-caption d-none d-md-block">
-                                    <p>LTD EII Eclipse</p>
+                                <div class="carousel-item" style="text-align: center !important;">
+                                    <a href="article.php?produit=LTD-EII-Eclipse"><img src="images/LTD-EII-Eclipse/LTD-EII-Eclipse1.jpg" alt=""></a>
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <p>LTD EII Eclipse</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="carousel-item" style="text-align: center !important;">
-                                <a href="article.php?produit=Harley-Benton-D120"><img src="images/Harley-Benton-D120/Harley-Benton-D1201.jpg" alt=""></a>
-                                <div class="carousel-caption d-none d-md-block">
-                                    <p>Harley Benton D120</p>
+                                <div class="carousel-item" style="text-align: center !important;">
+                                    <a href="article.php?produit=Harley-Benton-D120"><img src="images/Harley-Benton-D120/Harley-Benton-D1201.jpg" alt=""></a>
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <p>Harley Benton D120</p>
+                                    </div>
                                 </div>
-                            </div>
                             </div>
                             <!-- Controls -->
                             <a class="carousel-control-prev" href="#myCarousel1" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
                             </a>
                             <a class="carousel-control-next" href="#myCarousel1" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
                             </a>
                         </div>
                         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
@@ -86,33 +87,33 @@
                                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                             </ol>
                             <div class="carousel-inner">
-                            <div class="carousel-item active" style="text-align: center !important;">
-                                <a href="article.php?produit=Sterling-Cutlass-TE"><img src="images/Sterling-Cutlass-TE/Sterling-Cutlass-TE1.jpg" alt=""></a>
-                                <div class="carousel-caption d-none d-md-block">
-                                    <p>Sterling Cutlass TE</p>
+                                <div class="carousel-item active" style="text-align: center !important;">
+                                    <a href="article.php?produit=Sterling-Cutlass-TE"><img src="images/Sterling-Cutlass-TE/Sterling-Cutlass-TE1.jpg" alt=""></a>
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <p>Sterling Cutlass TE</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="carousel-item" style="text-align: center !important;">
-                                <a href="article.php?produit=Larry-Carlon-T7"><img src="images/Larry-Carlton-T7/Larry-Carlton-T71.jpg" alt=""></a>
-                                <div class="carousel-caption d-none d-md-block">
-                                    <p>Larry Carlton T7</p>
+                                <div class="carousel-item" style="text-align: center !important;">
+                                    <a href="article.php?produit=Larry-Carlon-T7"><img src="images/Larry-Carlton-T7/Larry-Carlton-T71.jpg" alt=""></a>
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <p>Larry Carlton T7</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="carousel-item" style="text-align: center !important;">
-                                <a href="article.php?produit=Squier-ST"><img src="images/Squier-ST/Squier-ST1.jpg" alt=""></a>
-                                <div class="carousel-caption d-none d-md-block">
-                                    <p>Squier ST 40th Anniversary</p>
+                                <div class="carousel-item" style="text-align: center !important;">
+                                    <a href="article.php?produit=Squier-ST"><img src="images/Squier-ST/Squier-ST1.jpg" alt=""></a>
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <p>Squier ST 40th Anniversary</p>
+                                    </div>
                                 </div>
-                            </div>
                             </div>
                             <!-- Controls -->
                             <a class="carousel-control-prev" href="#myCarousel2" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
                             </a>
                             <a class="carousel-control-next" href="#myCarousel2" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
                             </a>
                         </div>
                         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
@@ -189,6 +190,7 @@
                 </div>
             </div>
         </main>
+        
         <?php
             require_once('scripts/footer.php');
         ?>

@@ -31,14 +31,20 @@
                         	}else
                         	{
                         		$password = hash('sha256', $password);
-                        		$IP = $_SERVER[ 'REMOTE_ADDR' ];
+                        		$IP = $_SERVER['REMOTE_ADDR'];
 
                         		if($insert = $DB -> query("INSERT INTO user (LastName, FirstName, Gender, Age, Address, PhoneNumber, Email, Password, IP) VALUES ('$lastname', '$firstname', '$gender', '$age', '$address', '$tel', '$email', '$password', '$IP')"))
                   				{
-                  					$_SESSION[ 'user' ] = $email;
-            	                	header('Location:landing.php?method=signup');
-            	                }
-            	                else header('Location:landing.php?method=error');
+                                    if($recup = $DB -> query("SELECT ID FROM user WHERE Email='$email'"))
+                                    {
+                                        if($DB -> affected_rows == 1)
+                                        {
+                                            $id = $recup -> fetch_assoc();
+                                            $_SESSION['user'] = $id['ID'];
+                                            header('Location:landing.php?method=signup');
+                                        }else header('Location:landing.php?method=error');
+                                    }else header('Location:landing.php?method=error');
+            	                }else header('Location:landing.php?method=error');
                         	}
                         }else header('Location:signup.php?signup_err=tel');
                     }else header('Location:signup.php?signup_err=age');
@@ -58,7 +64,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
         <link rel="stylesheet" href="css/common_styles.css">
         <link rel="stylesheet" href="css/signup_styles.css">
-        <title>Sign up - PickaGuitar</title>
+        <title>Welcome to PickaGuitar</title>
     </head>
     <body>
         <?php
@@ -95,10 +101,10 @@
 
                     <div class="user-box">
                         <select name="gender" id="gender">
-                            <option value="unknown">I don't wish to share it</option>
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
-                            <option value="other">Other</option>
+                            <option value="Unknown">I don't wish to share it</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
                         </select>
                         <label for="gender">Gender</label>
                     </div>
