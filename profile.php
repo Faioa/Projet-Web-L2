@@ -4,9 +4,7 @@
 
     $user = $_SESSION['user'];
 
-    if(isset($_POST['modify']) && $_POST['modify'] == "false")
-        unset($_SESSION['modify']);
-    if(isset($_POST['modify']) && $_POST['modify'] == "true")
+    if(isset($_POST['modify']))
         $_SESSION['modify'] = "true";
     if(!isset($_POST['modify']))
         unset($_SESSION['modify']);
@@ -59,13 +57,13 @@
                                         {
                                             if($password !== $retype_password)
                                             {
-                                                $_SESSION['modify'] = true;
+                                                $_SESSION['modify'] = "true";
                                                 header('Location:profile.php?profile_err=password');
                                             }
                                             elseif($oldpassword !== $oldp)
                                             {
-                                                $_SESSION['modify'] = true;
-                                                header('Location:profile.php?profile_err=old_password?test='.$oldp);
+                                                $_SESSION['modify'] = "true";
+                                                header('Location:profile.php?profile_err=old_password');
                                             }
                                             else
                                             {
@@ -81,19 +79,19 @@
                                         }
                                         else
                                         {
-                                            $_POST['modify'] = "true";
+                                            $_SESSION['modify'] = "true";
                                             header('Location:profile.php?profile_err=tel');
                                         }
                                     }
                                     else
                                     {
-                                        $_SESSION['modify'] = true;
+                                        $_SESSION['modify'] = "true";
                                         header('Location:profile.php?profile_err=age');
                                     }
                                 }
                                 else
                                 {
-                                    $_SESSION['modify'] = true;
+                                    $_SESSION['modify'] = "true";
                                     header('Location:profile.php?profile_err=email');
                                 }
                             }else header('Location:profile.php?profile_err=already');
@@ -301,7 +299,7 @@
                                         <span></span>
                                         Submit
                                     </button>
-                                    <a role=\"button\" id=\"modify\" href=\"profile.php\" class=\"btn btn-outline-light\">
+                                    <a role=\"button\" href=\"profile.php\" id=\"cancel\" class=\"btn btn-outline-light\">
                                         <span></span>
                                         <span></span>
                                         <span></span>

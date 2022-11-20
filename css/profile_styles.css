@@ -1,5 +1,5 @@
 footer {
-  margin-top: 1230px;
+  margin-top: 1280px;
 }
 
 .login-box h2:first-child {
@@ -30,7 +30,7 @@ footer {
 
 .login-box {
   position: absolute;
-  top: 62%;
+  top: 72%;
   left: 50%;
   width: 600px;
   padding: 40px;

@@ -276,12 +276,12 @@
                                 <div id="price">
                                     <legend>Price Range</legend>
                                     <div>
-                                        <input type="range" name="price-range" id="price-range" min="0" max="10000"
+                                        <input type="range" name="price-range" id="price-range" min="0" max="6000"
                                         <?php
                                             if(isset($price_range))
                                                 echo " value=\"$price_range\"";
                                             else
-                                                echo " value=\"10000\"";
+                                                echo " value=\"6000\"";
                                         ?>
                                         oninput="this.nextElementSibling.value = this.value" />
                                         <output>
