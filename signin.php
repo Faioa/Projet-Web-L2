@@ -32,7 +32,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
         <link rel="stylesheet" href="css/common_styles.css">
         <link rel="stylesheet" href="css/signin_styles.css">
-        <title>Welcome to PickaGuitar</title>
+        <title>Sign In - PickaGuitar</title>
     </head>
     <body>
         <?php

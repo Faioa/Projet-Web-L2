@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
         <link rel="stylesheet" href="css/common_styles.css">
         <link rel="stylesheet" href="css/index_styles.css">
-        <title>Welcome to PickaGuitar</title>
+        <title>Store - PickaGuitar</title>
     </head>
     <body>
         <?php
