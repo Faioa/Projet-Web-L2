@@ -1,0 +1,83 @@
+.frame {
+  border: 3px solid #ccc;
+  background: #eee;
+  margin: auto;
+  padding: 15px 15px;
+  float: left;
+}
+
+.container {
+  background: rgba(29, 10, 0, 0.85); /*couleur*/
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 15 px;
+  display: flex;
+  flex-direction: column; 
+}
+
+.row {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-size:x-large;
+}
+
+.row:nth-child(1) {
+  margin-top: 2em;
+}
+
+.button2 {
+  border: 0;
+  line-height: 2.5;
+  padding: 0 20px;
+  font-size: 1rem;
+  text-align: center;
+  color: #fff;
+  border-radius: 10px;
+  background-color: rgba(220, 0, 0, 1);
+  background-image: linear-gradient(to top left,
+                                    rgba(0, 0, 0, .2),
+                                    rgba(0, 0, 0, .2) 30%,
+                                    rgba(0, 0, 0, 0)),
+              inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+
+.button2:hover {
+  background-color: rgba(255, 0, 0, 1);
+  transition: 0.1s;
+}
+
+.button1 {
+  border: 0;
+  line-height: 2.5;
+  padding: 0 20px;
+  font-size: 1rem;
+  text-align: center;
+  color: #fff;
+  border-radius: 10px;
+  background-color: rgb(67, 47, 224);
+  background-image: linear-gradient(to top left,
+                                    rgba(0, 0, 0, .2),
+                                    rgba(0, 0, 0, .2) 30%,
+                                    rgba(0, 0, 0, 0)),
+              inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+
+.button1:hover {
+  background-color: rgb(90, 66, 202);
+  transition: 0.1s;
+}
+
+input {
+  margin-right: 2em;
+}
+
+#address {
+  width:30em
+}
+
+input:read-write:not(:first-child) {
+  border: 1px solid white;
+  padding-left: 6px;
+  border-radius: 10px;
+}
+
