@@ -46,19 +46,19 @@
                             </ol>
                             <div class="carousel-inner">
                                 <div class="carousel-item active" style="text-align: center !important;">
-                                    <a href="article.php?produit=Gibson-SG"><img src="images/Gibson-SG/Gibson-SG1.jpg" alt=""></a>
+                                    <a href="article.php?product=Gibson-SG"><img src="images/Gibson-SG/Gibson-SG1.jpg" alt=""></a>
                                     <div class="carousel-caption d-none d-md-block">
                                         <p>Gibson SG</p>
                                     </div>
                                 </div>
                                 <div class="carousel-item" style="text-align: center !important;">
-                                    <a href="article.php?produit=LTD-EII-Eclipse"><img src="images/LTD-EII-Eclipse/LTD-EII-Eclipse1.jpg" alt=""></a>
+                                    <a href="article.php?product=LTD-EII-Eclipse"><img src="images/LTD-EII-Eclipse/LTD-EII-Eclipse1.jpg" alt=""></a>
                                     <div class="carousel-caption d-none d-md-block">
                                         <p>LTD EII Eclipse</p>
                                     </div>
                                 </div>
                                 <div class="carousel-item" style="text-align: center !important;">
-                                    <a href="article.php?produit=Harley-Benton-D120"><img src="images/Harley-Benton-D120/Harley-Benton-D1201.jpg" alt=""></a>
+                                    <a href="article.php?product=Harley-Benton-D120"><img src="images/Harley-Benton-D120/Harley-Benton-D1201.jpg" alt=""></a>
                                     <div class="carousel-caption d-none d-md-block">
                                         <p>Harley Benton D120</p>
                                     </div>
@@ -88,19 +88,19 @@
                             </ol>
                             <div class="carousel-inner">
                                 <div class="carousel-item active" style="text-align: center !important;">
-                                    <a href="article.php?produit=Sterling-Cutlass-TE"><img src="images/Sterling-Cutlass-TE/Sterling-Cutlass-TE1.jpg" alt=""></a>
+                                    <a href="article.php?product=Sterling-Cutlass-TE"><img src="images/Sterling-Cutlass-TE/Sterling-Cutlass-TE1.jpg" alt=""></a>
                                     <div class="carousel-caption d-none d-md-block">
                                         <p>Sterling Cutlass TE</p>
                                     </div>
                                 </div>
                                 <div class="carousel-item" style="text-align: center !important;">
-                                    <a href="article.php?produit=Larry-Carlon-T7"><img src="images/Larry-Carlton-T7/Larry-Carlton-T71.jpg" alt=""></a>
+                                    <a href="article.php?product=Larry-Carlton-T7"><img src="images/Larry-Carlton-T7/Larry-Carlton-T71.jpg" alt=""></a>
                                     <div class="carousel-caption d-none d-md-block">
                                         <p>Larry Carlton T7</p>
                                     </div>
                                 </div>
                                 <div class="carousel-item" style="text-align: center !important;">
-                                    <a href="article.php?produit=Squier-ST"><img src="images/Squier-ST/Squier-ST1.jpg" alt=""></a>
+                                    <a href="article.php?product=Squier-ST"><img src="images/Squier-ST/Squier-ST1.jpg" alt=""></a>
                                     <div class="carousel-caption d-none d-md-block">
                                         <p>Squier ST 40th Anniversary</p>
                                     </div>
@@ -126,7 +126,7 @@
                 <div class="row">
                     <div class="col-5">
                         <!--partie "notre favorite"-->
-                        <a href="article.php?produit=Gretsch-12-FalconRanger"><img src="images/Gretsch-12-FalconRanger/Gretch-12-FalconRanger1.jpg" alt="" class="img-fluid pb-3"></a>
+                        <a href="article.php?product=Gretsch-12-FalconRanger"><img src="images/Gretsch-12-FalconRanger/Gretsch-12-FalconRanger1.jpg" alt="" class="img-fluid pb-3" /></a>
                         <div class="text-deals">
                             <h4>Gretsch 12 FalconRanger</h4>
                             $609
@@ -155,14 +155,14 @@
                         <div class="row" style="align-items: center;">
                             <div class="row">
                                 <div class="col-6">
-                                    <a href="article.php?produit=ESP/SnakeByte"><img src="images/ESP-SnakeByte/ESP-SnakeByte1.jpg" class=" img-fluid pb-3"></a>
+                                    <a href="article.php?product=ESP-SnakeByte"><img src="images/ESP-SnakeByte/ESP-SnakeByte1.jpg" class=" img-fluid pb-3"></a>
                                     <div class="text-deals">
                                         <h4>ESP Snakebyte</h4>
                                         <span class="striked">$1799</span> <span class="promo">$1499</span>
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <a href="article.php?produit=Fender-Troy-Jazzmaster"><img src="images/Fender-Troy-Jazzmaster/Fender-Troy-Jazzmaster1.jpg" class=" img-fluid pb-3"></a>
+                                    <a href="article.php?product=Fender-Troy-Jazzmaster"><img src="images/Fender-Troy-Jazzmaster/Fender-Troy-Jazzmaster1.jpg" class=" img-fluid pb-3"></a>
                                     <div class="text-deals">
                                         <h4>Fender Troy Jazzmaster</h4>
                                         <span class="striked">$1499</span> <span class="promo">$1499</span>
@@ -171,14 +171,14 @@
                             </div>
                             <div class="row">
                                 <div class="col-6">
-                                    <a href="article.php?produit=Dangelico-Premier"><img src="images/Dangelico-Premier/Dangelico-Premier1.jpg" class=" img-fluid pb-3"></a>
+                                    <a href="article.php?product=Dangelico-Premier"><img src="images/Dangelico-Premier/Dangelico-Premier1.jpg" class=" img-fluid pb-3"></a>
                                     <div class="text-deals">
                                         <h4>D'Angelico Premier</h4>
                                         <span class="striked">$1099</span> <span class="promo">$899</span>
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <a href="article.php?produit=Fender-Vintera"><img src="images/Fender-Vintera/Fender-Vintera1.jpg" class=" img-fluid pb-3"></a>
+                                    <a href="article.php?product=Fender-Vintera"><img src="images/Fender-Vintera/Fender-Vintera1.jpg" class=" img-fluid pb-3"></a>
                                     <div class="text-deals">
                                         <h4>Fender Vintera</h4>
                                         <span class="striked">$1150</span> <span class="promo">$1050</span>
