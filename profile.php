@@ -6,7 +6,7 @@
 
     if(isset($_POST['modify']))
         $_SESSION['modify'] = "true";
-    if(!isset($_POST['modify']))
+    if(!isset($_POST['modify']) && !isset($_GET['profile_err']))
         unset($_SESSION['modify']);
 
     if($user != "localhost")

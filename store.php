@@ -328,7 +328,7 @@
                                     </div>
                                 </div>
                                 <div id="submit">
-                                    <button type="reset">Reset All</button>
+                                    <a role="button" href="store.php?page=<?php echo $page; ?>">Reset All</a>
                                     <button type="submit" name="submit" value="true">Apply</button>
                                 </div>
                             </div>

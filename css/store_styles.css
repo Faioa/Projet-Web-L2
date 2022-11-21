@@ -48,13 +48,14 @@ form legend {
 	justify-content: space-around;
 }
 
-#submit button{
+#submit button, #submit a{
+	color: white;
 	padding: 10px;
 	border-radius: 10px;
 	font-size: 20px;
 }
 
-#submit button:hover, #pages button:hover{
+#submit button:hover, #pages button:hover, #submit a:hover{
 	background-color: white;
 	color: rgb(51, 17, 2);
 	text-decoration: none;
