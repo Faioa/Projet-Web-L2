@@ -90,7 +90,7 @@
             }
         }
     }
-    if(isset($_GET['search']))
+    elseif(isset($_GET['search']))
     {
         $search = "%".htmlspecialchars($_GET['search'])."%";
         $request = $request." WHERE UPPER(Name) LIKE UPPER('$search')";

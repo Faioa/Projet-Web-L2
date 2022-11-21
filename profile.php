@@ -17,9 +17,16 @@
             {
                 if(isset($_POST['delete']))
                 {
-                    if($query = $DB->query("DELETE FROM user WHERE ID = '$user'"))
+                    if($query = $DB->query("SELECT ID FROM cart WHERE IdUser = '$user'"))
                     {
-                        header('Location:landing.php?method=delete');
+                        if($DB -> affected_rows > 0)
+                        {
+                            if($query = $DB->query("DELETE FROM cart WHERE IdUser = '$user'"));
+                            else header('Location:landing.php?method=error');
+                        }
+                        if($query = $DB->query("DELETE FROM user WHERE ID = '$user'"))
+                            header('Location:landing.php?method=delete');
+                        else header('Location:landing.php?method=error');
                     }else header('Location:landing.php?method=error');
                 }
                 else
